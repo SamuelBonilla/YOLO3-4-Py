@@ -52,7 +52,7 @@ cdef class Image:
             memcpy(self.img.data, np_buff.data, h*w*c*4)
 
     def show_image(self, char* title):
-        show_image(self.img, title)
+        show_image(self.img, title, 0)
 
     def __dealloc__(self):
         free_image(self.img)
